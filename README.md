@@ -22,4 +22,36 @@ Run the following commands to install OpenGL.
     sudo apt-get update
     sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 
+Install glew
+
+    sudo apt-get install libglew-dbg libglew-dev libglew1.10 libglewmx-dbg libglewmx-dev glew-utils
+
+Install glee
+
+    sudo apt-get install glee-dev
+
+Install glm 
+
+    sudo apt-get install libglm-dev
+
+Remove GLUT_3_2_CORE_PROFILE
+
 ## Example
+
+### 01 First App
+
+A hello world for OpenGL.
+
+### 02 GLUT Basic
+
+## Template
+
+A template for OpenGL project.
+
+## Reference
+
+1. [stb](https://github.com/nothings/stb)
+
+2. [glm](https://glm.g-truc.net/0.9.9/index.html)
+
+3. [tinyobjloader](https://github.com/syoyo/tinyobjloader)

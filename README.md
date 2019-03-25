@@ -44,11 +44,15 @@ A hello world for OpenGL.
 
 ### 02 GLUT Basic
 
-Some example of glut callback functions and camera setting.
+Some examples of glut callback functions and camera setting.
 
 ### 03 Vertex and Shader
 
-A example for drawing vertices and simple shader.
+An example for drawing vertices and simple shader.
+
+### 04 Buffer
+
+Vertex buffer object(VBO) and vertex array object(VAO).
 
 ## Template
 

@@ -2,9 +2,9 @@
 #include "GL/freeglut.h"
 
 
+GLuint program;
 GLuint triangle_buffer;
 GLuint triangle_vao;
-GLuint program;
 
 static const GLfloat triangle_vertices[] = {
 	-0.4f, -0.4f, 0.0f, 1.0f,
@@ -55,12 +55,14 @@ void My_Init() {
 	glAttachShader(program, fs);
 	glLinkProgram(program);
 
-	///////////////////////////	
-	glGenVertexArrays(1, &triangle_vao);
-	glBindVertexArray(triangle_vao);
+	// vbo
 	glGenBuffers(1, &triangle_buffer);
 	glBindBuffer(GL_ARRAY_BUFFER, triangle_buffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(triangle_vertices) * sizeof(float), &triangle_vertices[0], GL_STATIC_DRAW);
+	
+	// vao
+	glGenVertexArrays(1, &triangle_vao);
+	glBindVertexArray(triangle_vao);
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
 	glEnableVertexAttribArray(0);
 }

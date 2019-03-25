@@ -44,6 +44,12 @@ A hello world for OpenGL.
 
 ### 02 GLUT Basic
 
+Some example of glut callback functions and camera setting.
+
+### 03 Vertex and Shader
+
+A example for drawing vertices and simple shader.
+
 ## Template
 
 A template for OpenGL project.

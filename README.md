@@ -78,6 +78,10 @@ Draw a square which is composed of two triangles.
 Draw a lot of models and these models contain the same 
 set of vertex data.
 
+### 11 Fragment Shader
+
+Use fragment shader to change the output color.
+
 ## Template
 
 A template for OpenGL project.

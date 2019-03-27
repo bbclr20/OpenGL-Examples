@@ -73,6 +73,11 @@ Draw cube which is composed of GL_TRIANGLES.
 
 Draw a square which is composed of two triangles.
 
+### 10 Instancing
+
+Draw a lot of models and these models contain the same 
+set of vertex data.
+
 ## Template
 
 A template for OpenGL project.

@@ -54,6 +54,11 @@ An example for drawing vertices and simple shader.
 
 Vertex buffer object(VBO) and vertex array object(VAO).
 
+### 05 Uniform
+
+A **uniform** is a global GLSL variable which shader program
+ can pass it to program.
+
 ## Template
 
 A template for OpenGL project.

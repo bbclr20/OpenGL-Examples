@@ -80,7 +80,9 @@ set of vertex data.
 
 ### 11 Fragment Shader
 
-Use fragment shader to change the output color.
+- SimpleExample: use fragment shader to change the output color.
+
+- BlendingExample: use OpenGL blending function to blend the images.
 
 ## Template
 

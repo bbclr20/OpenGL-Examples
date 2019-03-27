@@ -3,11 +3,13 @@ LIBS=-lglut -lGLU -lGL -lGLEW
 INC=-I../../../Include -I../Include 
 CFLAGS=-g -std=c++11
 
-main.out: main.o
-	$(CC) $(CFLAGS) -o  $@ $^ $(LIBS)
+all: SimpleExample.out BlendingExample.out
 
-main.o: main.cpp
-	$(CC) $(CFLAGS) -c  $^ $(INC)
+SimpleExample.out: SimpleExample.cpp
+	$(CC) $(CFLAGS) -o $@ $^ $(INC) $(LIBS)
+
+BlendingExample.out: BlendingExample.cpp
+	$(CC) $(CFLAGS) -o $@ $^ $(INC) $(LIBS)
 
 .PHONY: clean
 clean:

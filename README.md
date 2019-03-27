@@ -69,6 +69,10 @@ Draw triangle.
 
 Draw cube which is composed of GL_TRIANGLES.
 
+### 09 Triangle Strip
+
+Draw a square which is composed of two triangles.
+
 ## Template
 
 A template for OpenGL project.

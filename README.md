@@ -65,6 +65,10 @@ A **uniform** is a global GLSL variable which shader program
 
 Draw triangle.
 
+### 08 Spining Cube
+
+Draw cube which is composed of GL_TRIANGLES.
+
 ## Template
 
 A template for OpenGL project.

@@ -59,6 +59,12 @@ Vertex buffer object(VBO) and vertex array object(VAO).
 A **uniform** is a global GLSL variable which shader program
  can pass it to program.
 
+### 06 Uniform Block
+
+### 07 Traingle
+
+Draw triangle.
+
 ## Template
 
 A template for OpenGL project.

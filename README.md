@@ -84,6 +84,8 @@ set of vertex data.
 
 - BlendingExample: use OpenGL blending function to blend the images.
 
+### 12 Tessellation
+
 ## Template
 
 A template for OpenGL project.

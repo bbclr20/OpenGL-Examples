@@ -5,7 +5,7 @@ using namespace std;
 
 const int SIZE_1 = 1;
 const int SIZE_2 = 2;
-const int MENU_EXIT = 3;
+const int MENU_EXIT = 0xFF;
 
 const float BACKGROUND_COLOR = 0.10;
 const float TIMER_INTERVAL = 16;
@@ -60,7 +60,20 @@ void My_Reshape(int width, int height) {
 }
 
 // menu event
-void My_Menu(int id) {
+void My_Main_Menu(int id) {
+    switch (id) {
+        case MENU_EXIT:
+           exit(0);
+        break;
+        
+        default:
+        break;
+    }
+	glutPostRedisplay();
+}
+
+// menu event
+void My_Size_Menu(int id) {
     switch (id) {
         case SIZE_1:
             teapot_size = 1.0f;
@@ -69,9 +82,26 @@ void My_Menu(int id) {
         case SIZE_2:
             teapot_size = 2.0f;
             break;
-        
-        case MENU_EXIT:
-            exit(0);
+
+        default:
+            break;
+    }
+	glutPostRedisplay();
+}
+
+// menu event
+void My_Color_Menu(int color) {
+    switch (color) {
+        case Red:
+            myColor = Red;
+            break;
+
+        case Green:
+            myColor = Green;
+            break;
+       
+        case Blue:
+            myColor = Blue;
             break;
     
         default:
@@ -97,21 +127,31 @@ void My_Keyboard(unsigned char key, int x, int y) {
 }
 
 void addMenu() {
-	int menu_main = glutCreateMenu(My_Menu); 
-    int menu_entry = glutCreateMenu(My_Menu);
+    int menu_main = glutCreateMenu(My_Main_Menu); 
+    int menu_size_entry = glutCreateMenu(My_Size_Menu);
+    int menu_color_entry = glutCreateMenu(My_Color_Menu);
 
-    // set main menu
+    // set size menu
 	glutSetMenu(menu_main);
-	glutAddSubMenu("Teapot size", menu_entry); // add sub menu to item
-	glutAddMenuEntry("Exit", MENU_EXIT);
-
-    // set submenu
-	glutSetMenu(menu_entry);
+	glutAddSubMenu("Teapot size", menu_size_entry); // add sub menu to item
+	glutSetMenu(menu_size_entry);
 	glutAddMenuEntry("1.0", SIZE_1);
 	glutAddMenuEntry("2.0", SIZE_2);
 
-    // commit setting
+    // set color menu
 	glutSetMenu(menu_main);
+	glutAddSubMenu("Teapot color", menu_color_entry); // add sub menu to item
+	glutSetMenu(menu_color_entry);
+	glutAddMenuEntry("Red", Red);
+	glutAddMenuEntry("Green", Green);
+    glutAddMenuEntry("Blue", Blue);
+    
+    // set exit
+    glutSetMenu(menu_main);
+    glutAddMenuEntry("Exit", MENU_EXIT);
+	
+    // commit setting
+    glutSetMenu(menu_main);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
